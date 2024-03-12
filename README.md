@@ -170,7 +170,7 @@ AzureDeltaLake_properties_typeProperties_url: https://prod{{organization}}deltal
 #### Environment
 * Azure Public - https://dev.azuresynapse.net
 * Azure China - https://dev.azuresynapse.azure.cn
-* Azure US Government - https://dev.azuresynapse.usgovcloudapi.net
+* Azure US Government - https://dev.azuresynapse.usgovcloudapi.net 
 
 
 ## Trademarks
