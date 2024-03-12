@@ -353,7 +353,8 @@ export class ArtifactClient {
                 }
 
                 url = encodeURI(url) + `?${this.symsApiVersion}`;
-
+                console.log(`URL for artifact deployment: ${url}`)
+                console.log(JSON.stringify(artifact))
                 await this.client.put(url, JSON.stringify(artifact), this.getHeaders(token)).then((res) => {
                     let resStatus = res.message.statusCode;
                     console.log(`For Artifact: ${artifact['name']} of type ${artifact['type']}: ArtifactDeploymentTask status: ${resStatus}; status message: ${res.message.statusMessage}`);
