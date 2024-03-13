@@ -1,16 +1,20 @@
 {
   "name": "synapse_action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github action to deploy template and parameter files to Synapse Workspace.",
-  "main": "entrypoint.js",
+  "main": "main.js",
   "scripts": {
     "test": "mocha",
-    "start": "node entrypoint.js",
+    "start": "node main.js",
     "build": "tsc",
-    "bundle:server": "webpack"
+    "build:webpack": "webpack",
+    "release": "ncc build main.ts -o ../dist"
   },
   "keywords": [],
   "author": "Aaditya Sharma",
+  "contributors": [
+    {"name":"Stefan Saftic","url":"https://github.com/stefansaftic"}
+  ],
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.2.6",

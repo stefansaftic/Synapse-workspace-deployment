@@ -2,6 +2,10 @@
 
 A GitHub Action to deploy Synapse artifacts using templates. With this action you can automate your workflow to deploy artifacts and manage synapse resources.
 
+## Build from source
+* Plase run following command ```npm i -g @vercel/ncc``` and then ```npm run release``` inside build_and_deploy folder
+* After run you will have new index.js file inside dist folder.
+
 ## Dependencies
 * [Checkout](https://github.com/actions/checkout) To check-out your repository so the workflow can access any specified template and parameter files.
 
@@ -65,7 +69,7 @@ Synapse Workspace Deployment action supports 3 operations :
 1. Deploy
 
 ```yaml
-uses: Azure/synapse-workspace-deployment
+uses: stefansaftic/synapse-workspace-deployment
         with:
           TargetWorkspaceName: 'targetworkspace'
           TemplateFile: './TemplateForWorkspace.json'
@@ -82,7 +86,7 @@ uses: Azure/synapse-workspace-deployment
 2. Validate
 
 ```yaml
-- uses: Azure/synapse-workspace-deployment
+- uses: stefansaftic/synapse-workspace-deployment
         with:
           TargetWorkspaceName: 'targetworkspace'
           ArtifactsFolder: './RootFolder'
@@ -96,7 +100,7 @@ uses: Azure/synapse-workspace-deployment
 3. Validate and deploy
 
 ```yaml
-uses: Azure/synapse-workspace-deployment
+uses: stefansaftic/synapse-workspace-deployment
         with:
           TargetWorkspaceName: 'targetworkspace'
           ArtifactsFolder: './RootFolder'
@@ -116,7 +120,7 @@ MSI is only supported with self hosted VMs on Azure. Please set the runner as [s
 Enabled the system assigned managed identity for your VM and add it to your Synapse studio as Synapse Admin.
 
 ```yaml
-uses: Azure/synapse-workspace-deployment
+uses: stefansaftic/synapse-workspace-deployment
         with:
           TargetWorkspaceName: 'targetworkspace'
           TemplateFile: './TemplateForWorkspace.json'
